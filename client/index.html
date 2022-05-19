@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Talk™</title>
+        <meta name="description" content="fablab project thingy">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="index.css">
+
+        <script src="twemoji/twemoji.min.js"></script>
+    </head>
+    <body>
+        <!--
+        Emojis courtesy of Twitter Twemoji. https://twemoji.twitter.com
+        -->
+        
+        <div id="login-modal">
+            <form id="login">
+                <div id="login-top"></div>
+                <div id="login-title">Hello.</div>
+                <div id="login-subtitle">Enter a username to continue!</div>
+                <div id="login-invalid" hidden>Invalid name, try again.</div>
+                <div id="login-inputs">
+                    <input id="login-name" placeholder="John Doe"></input>
+                    <button id="login-submit" class="material-symbols-outlined" type="submit">login</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="messages-scroll">
+            <div id="messages"></div>
+        </div>
+        <div id="box">
+            <!--
+            <div id="scroll-menu">
+                <button id="to-bottom" type="button">To Bottom</button>
+            </div>-->
+            <form id="message-form">
+                <div id="message-input">
+                    <div id="input" class="input" type="text" placeholder="Type something..." contenteditable></div>
+                    <button id="emoji-trigger" type="button">🙂</button>
+                </div>
+                <button id="send" class="material-symbols-outlined" type="submit">send</button>
+            </form>
+        </div>
+
+        <script src="socket.io/socket.io.js"></script>
+        
+        <script src="emoji-button.js" type="module"></script>
+        <script src="max-length.js"></script>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
